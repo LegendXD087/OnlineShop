@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Home {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="register">
+    <h1>Welcome !</h1>
+    <h2>Register Please</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.name }}<br>
+        {{ form.phone }}<br>
+        <button type="submit">Submit</button>
+    <p>{{ error }}</p>
+    </form>
+</div>
+</body>
+</html>
